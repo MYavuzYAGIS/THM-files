@@ -1,0 +1,6 @@
+/admin                (Status: 301) [Size: 312] [--> http://10.10.11.157/admin/]
+/css                  (Status: 301) [Size: 310] [--> http://10.10.11.157/css/]
+/js                   (Status: 301) [Size: 309] [--> http://10.10.11.157/js/]
+/config               (Status: 301) [Size: 313] [--> http://10.10.11.157/config/]
+/ai                   (Status: 301) [Size: 309] [--> http://10.10.11.157/ai/]
+/squirrelmail         (Status: 301) [Size: 319] [--> http://10.10.11.157/squirrelmail/]

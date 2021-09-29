@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2021.8.2" exportTime="Wed Sep 29 01:31:22 TRT 2021">
+  <item>
+    <time>Wed Sep 29 01:30:53 TRT 2021</time>
+    <url><![CDATA[http://10.10.11.157/squirrelmail/src/redirect.php]]></url>
+    <host ip="10.10.11.157">10.10.11.157</host>
+    <port>80</port>
+    <protocol>http</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/squirrelmail/src/redirect.php]]></path>
+    <extension>php</extension>
+    <request base64="true"><![CDATA[UE9TVCAvc3F1aXJyZWxtYWlsL3NyYy9yZWRpcmVjdC5waHAgSFRUUC8xLjENCkhvc3Q6IDEwLjEwLjExLjE1Nw0KQ29udGVudC1MZW5ndGg6IDc3DQpDYWNoZS1Db250cm9sOiBtYXgtYWdlPTANClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENCk9yaWdpbjogaHR0cDovLzEwLjEwLjExLjE1Nw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS85Mi4wLjQ1MTUuMTU5IFNhZmFyaS81MzcuMzYNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksaW1hZ2UvYXZpZixpbWFnZS93ZWJwLGltYWdlL2FwbmcsKi8qO3E9MC44LGFwcGxpY2F0aW9uL3NpZ25lZC1leGNoYW5nZTt2PWIzO3E9MC45DQpSZWZlcmVyOiBodHRwOi8vMTAuMTAuMTEuMTU3L3NxdWlycmVsbWFpbC9zcmMvbG9naW4ucGhwDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMsZW47cT0wLjkNCkNvb2tpZTogU1FNU0VTU0lEPWtvMmg0ZjR2MHBuZmc0Zjl2NTMyNmVzc202DQpDb25uZWN0aW9uOiBjbG9zZQ0KDQpsb2dpbl91c2VybmFtZT1haG1ldCZzZWNyZXRrZXk9YWhtZXQmanNfYXV0b2RldGVjdF9yZXN1bHRzPTEmanVzdF9sb2dnZWRfaW49MQ==]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+</items>
