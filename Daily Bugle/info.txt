@@ -1,0 +1,10 @@
+username=ahmet&password=mehmet&Submit=&option=com_users&task=user.login&return=aHR0cDovLzEwLjEwLjk0LjE2Lw%3D%3D&6384ef0617ae87c001ebf7b45395cd5d=1
+
+
+ [$] Found user ['811', 'Super User', 'jonah', 'jonah@tryhackme.com', '$2y$10$0veO/JSFh4389Lluc4Xya.dfy2MF.bZhz0jVMw.V.d3p12kBtZutm', '', '']
+
+
+spiderman123 ==> password
+
+	public $user = 'root';
+	public $password = 'nv5uz9r3ZEDzVjNu';
