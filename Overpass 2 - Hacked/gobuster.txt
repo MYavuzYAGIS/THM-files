@@ -1,0 +1,4 @@
+/img                  (Status: 301) [Size: 312] [--> http://10.10.255.215/img/]
+/downloads            (Status: 301) [Size: 318] [--> http://10.10.255.215/downloads/]
+/aboutus              (Status: 301) [Size: 316] [--> http://10.10.255.215/aboutus/]
+/css                  (Status: 301) [Size: 312] [--> http://10.10.255.215/css/]
