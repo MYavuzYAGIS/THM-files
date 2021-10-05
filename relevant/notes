@@ -1,0 +1,29 @@
+IP 10.10.27.37
+SMB Port 49663
+Directory nt4wrksv
+
+
+Enter WORKGROUP\myyagis's password: 
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        ADMIN$          Disk      Remote Admin
+        C$              Disk      Default share
+        IPC$            IPC       Remote IPC
+        nt4wrksv        Disk    
+        
+        
+        
+        From SMB
+
+[User Passwords - Encoded]
+Qm9iIC0gIVBAJCRXMHJEITEyMw==
+QmlsbCAtIEp1dzRubmFNNG40MjA2OTY5NjkhJCQk
+
+Cracked : 
+
+Bob - !P@$$W0rD!123
+Bill - Juw4nnaM4n420696969!$$$
+
+
+Spawn directory: c:\windows\system32\inetsrv>
