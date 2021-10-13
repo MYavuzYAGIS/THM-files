@@ -1,0 +1,4 @@
+mona Memory comparison results
+Address                    Status                     BadChars                   Type                       Location
+0x01acfa30                 Corruption after 6 bytes   00 07 08 2e 2f a0 a1       normal                     Stack
+
