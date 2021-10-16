@@ -1,0 +1,59 @@
+# Nmap 7.92 scan initiated Sat Oct 16 17:15:56 2021 as: nmap -sV -sC -Pn --script vuln -oN brainstorm.nmap 10.10.211.70
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for brainstorm.thm (10.10.211.70)
+Host is up (0.075s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        Microsoft ftpd
+3389/tcp open  tcpwrapped
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+9999/tcp open  abyss?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     Welcome to Brainstorm chat (beta)
+|     Please enter your username (max 20 characters): Write a message:
+|   NULL: 
+|     Welcome to Brainstorm chat (beta)
+|_    Please enter your username (max 20 characters):
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9999-TCP:V=7.92%I=7%D=10/16%Time=616ADF04%P=x86_64-apple-darwin20.4
+SF:.0%r(NULL,52,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x
+SF:20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20")%r(Get
+SF:Request,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x20
+SF:enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20Write\x20a
+SF:\x20message:\x20")%r(HTTPOptions,63,"Welcome\x20to\x20Brainstorm\x20cha
+SF:t\x20\(beta\)\nPlease\x20enter\x20your\x20username\x20\(max\x2020\x20ch
+SF:aracters\):\x20Write\x20a\x20message:\x20")%r(FourOhFourRequest,63,"Wel
+SF:come\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20your\x
+SF:20username\x20\(max\x2020\x20characters\):\x20Write\x20a\x20message:\x2
+SF:0")%r(JavaRMI,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlea
+SF:se\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20Writ
+SF:e\x20a\x20message:\x20")%r(GenericLines,63,"Welcome\x20to\x20Brainstorm
+SF:\x20chat\x20\(beta\)\nPlease\x20enter\x20your\x20username\x20\(max\x202
+SF:0\x20characters\):\x20Write\x20a\x20message:\x20")%r(RTSPRequest,63,"We
+SF:lcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20your\
+SF:x20username\x20\(max\x2020\x20characters\):\x20Write\x20a\x20message:\x
+SF:20")%r(RPCCheck,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPl
+SF:ease\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20Wr
+SF:ite\x20a\x20message:\x20")%r(DNSVersionBindReqTCP,63,"Welcome\x20to\x20
+SF:Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20your\x20username\x20
+SF:\(max\x2020\x20characters\):\x20Write\x20a\x20message:\x20")%r(DNSStatu
+SF:sRequestTCP,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease
+SF:\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20Write\
+SF:x20a\x20message:\x20")%r(Help,63,"Welcome\x20to\x20Brainstorm\x20chat\x
+SF:20\(beta\)\nPlease\x20enter\x20your\x20username\x20\(max\x2020\x20chara
+SF:cters\):\x20Write\x20a\x20message:\x20")%r(SSLSessionReq,63,"Welcome\x2
+SF:0to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20your\x20usern
+SF:ame\x20\(max\x2020\x20characters\):\x20Write\x20a\x20message:\x20")%r(T
+SF:erminalServerCookie,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)
+SF:\nPlease\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x
+SF:20Write\x20a\x20message:\x20");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct 16 17:20:45 2021 -- 1 IP address (1 host up) scanned in 288.87 seconds
