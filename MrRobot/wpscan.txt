@@ -1,0 +1,164 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.18
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.10.76.249/wp-login/ [10.10.76.249]
+[32m[+][0m Started: Sun Oct 17 09:40:07 2021
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - Server: Apache
+ |  - X-Powered-By: PHP/5.5.29
+ |  - X-Mod-Pagespeed: 1.9.32.3-4523
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m WordPress readme found: http://10.10.76.249/wp-login/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m This site seems to be a multisite
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | Reference: http://codex.wordpress.org/Glossary#Multisite
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://10.10.76.249/wp-login/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 4.3.1 identified (Insecure, released on 2015-09-15).
+ | Found By: Query Parameter In Install Page (Aggressive Detection)
+ |  - http://10.10.76.249/wp-includes/css/buttons.min.css?ver=4.3.1
+ |  - http://10.10.76.249/wp-includes/css/dashicons.min.css?ver=4.3.1
+ | Confirmed By: Query Parameter In Upgrade Page (Aggressive Detection)
+ |  - http://10.10.76.249/wp-includes/css/buttons.min.css?ver=4.3.1
+ |  - http://10.10.76.249/wp-includes/css/dashicons.min.css?ver=4.3.1
+
+[34m[i][0m The main theme could not be detected.
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+
+[34m[i][0m No plugins Found.
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |=================================================================|
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m Performing password attack on Wp Login against 1 user/s
+
+Progress: |
+Progress: |
+Progress: |
+[34m[i][0m No Valid Passwords Found.
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Sun Oct 17 09:54:58 2021
+[32m[+][0m Requests Done: 7081
+[32m[+][0m Cached Requests: 153
+[32m[+][0m Data Sent: 2.404 MB
+[32m[+][0m Data Received: 27.281 MB
+[32m[+][0m Memory used: 259.484 MB
+[32m[+][0m Elapsed time: 00:14:51
+
+Scan Aborted: Canceled by User
+
+Scan Aborted: --passwords The path '/home/myyagis/Desktop/THM/Mrrobot/fsocity.dic ' does not exist or is not a file
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.18
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.10.76.249/wp-login/ [10.10.76.249]
+[32m[+][0m Started: Sun Oct 17 09:56:34 2021
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - Server: Apache
+ |  - X-Powered-By: PHP/5.5.29
+ |  - X-Mod-Pagespeed: 1.9.32.3-4523
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m WordPress readme found: http://10.10.76.249/wp-login/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m This site seems to be a multisite
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | Reference: http://codex.wordpress.org/Glossary#Multisite
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://10.10.76.249/wp-login/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 4.3.1 identified (Insecure, released on 2015-09-15).
+ | Found By: Query Parameter In Install Page (Aggressive Detection)
+ |  - http://10.10.76.249/wp-includes/css/buttons.min.css?ver=4.3.1
+ |  - http://10.10.76.249/wp-includes/css/dashicons.min.css?ver=4.3.1
+ | Confirmed By: Query Parameter In Upgrade Page (Aggressive Detection)
+ |  - http://10.10.76.249/wp-includes/css/buttons.min.css?ver=4.3.1
+ |  - http://10.10.76.249/wp-includes/css/dashicons.min.css?ver=4.3.1
+
+[34m[i][0m The main theme could not be detected.
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+
+[34m[i][0m No plugins Found.
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |=================================================================|
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m Performing password attack on Wp Login against 1 user/s
+
+Progress: |
+[34m[i][0m No Valid Passwords Found.
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Sun Oct 17 10:00:08 2021
+[32m[+][0m Requests Done: 759
+[32m[+][0m Cached Requests: 5
+[32m[+][0m Data Sent: 238.003 KB
+[32m[+][0m Data Received: 2.285 MB
+[32m[+][0m Memory used: 233.824 MB
+[32m[+][0m Elapsed time: 00:03:34
+
+Scan Aborted: Canceled by User

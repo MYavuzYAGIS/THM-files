@@ -1,0 +1,15 @@
+ USERS:
+
+ elliot        elliot@mrrobot.com      password   h4ckedbyMe
+ mich05654     kgordon@therapist.com   password : h4ckedbyMe
+
+ wptheme:
+
+http://10.10.76.249/wp-admin/theme-editor.php?file=content-link.php&theme=twentyfifteen/content.link.php
+
+
+
+robot:c3fcd3d76192e4007dfb496cca67e13b
+
+
+abcdefghijklmnopqrstuvwxyz
