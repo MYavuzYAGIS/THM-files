@@ -1,0 +1,113 @@
+# Nmap 7.92 scan initiated Tue Oct 19 18:23:47 2021 as: nmap -sV -sC -Pn --script vuln -oN gatekeeper.nmap 10.10.183.118
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.183.118 (10.10.183.118)
+Host is up (0.081s latency).
+Not shown: 989 closed tcp ports (conn-refused)
+PORT      STATE SERVICE            VERSION
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server?
+| rdp-vuln-ms12-020: 
+|   VULNERABLE:
+|   MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0152
+|     Risk factor: Medium  CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152
+|   
+|   MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0002
+|     Risk factor: High  CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+31337/tcp open  Elite?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     Hello GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0
+|     Hello
+|   GenericLines: 
+|     Hello 
+|     Hello
+|   GetRequest: 
+|     Hello GET / HTTP/1.0
+|     Hello
+|   HTTPOptions: 
+|     Hello OPTIONS / HTTP/1.0
+|     Hello
+|   Help: 
+|     Hello HELP
+|   Kerberos: 
+|     Hello !!!
+|   LDAPSearchReq: 
+|     Hello 0
+|     Hello
+|   LPDString: 
+|     Hello 
+|     default!!!
+|   RTSPRequest: 
+|     Hello OPTIONS / RTSP/1.0
+|     Hello
+|   SIPOptions: 
+|     Hello OPTIONS sip:nm SIP/2.0
+|     Hello Via: SIP/2.0/TCP nm;branch=foo
+|     Hello From: <sip:nm@nm>;tag=root
+|     Hello To: <sip:nm2@nm2>
+|     Hello Call-ID: 50000
+|     Hello CSeq: 42 OPTIONS
+|     Hello Max-Forwards: 70
+|     Hello Content-Length: 0
+|     Hello Contact: <sip:nm@nm>
+|     Hello Accept: application/sdp
+|     Hello
+|   SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|_    Hello
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49161/tcp open  msrpc              Microsoft Windows RPC
+49165/tcp open  msrpc              Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port31337-TCP:V=7.92%I=7%D=10/19%Time=616EE347%P=x86_64-apple-darwin20.
+SF:4.0%r(GetRequest,24,"Hello\x20GET\x20/\x20HTTP/1\.0\r!!!\nHello\x20\r!!
+SF:!\n")%r(SIPOptions,142,"Hello\x20OPTIONS\x20sip:nm\x20SIP/2\.0\r!!!\nHe
+SF:llo\x20Via:\x20SIP/2\.0/TCP\x20nm;branch=foo\r!!!\nHello\x20From:\x20<s
+SF:ip:nm@nm>;tag=root\r!!!\nHello\x20To:\x20<sip:nm2@nm2>\r!!!\nHello\x20C
+SF:all-ID:\x2050000\r!!!\nHello\x20CSeq:\x2042\x20OPTIONS\r!!!\nHello\x20M
+SF:ax-Forwards:\x2070\r!!!\nHello\x20Content-Length:\x200\r!!!\nHello\x20C
+SF:ontact:\x20<sip:nm@nm>\r!!!\nHello\x20Accept:\x20application/sdp\r!!!\n
+SF:Hello\x20\r!!!\n")%r(GenericLines,16,"Hello\x20\r!!!\nHello\x20\r!!!\n"
+SF:)%r(HTTPOptions,28,"Hello\x20OPTIONS\x20/\x20HTTP/1\.0\r!!!\nHello\x20\
+SF:r!!!\n")%r(RTSPRequest,28,"Hello\x20OPTIONS\x20/\x20RTSP/1\.0\r!!!\nHel
+SF:lo\x20\r!!!\n")%r(Help,F,"Hello\x20HELP\r!!!\n")%r(SSLSessionReq,C,"Hel
+SF:lo\x20\x16\x03!!!\n")%r(TerminalServerCookie,B,"Hello\x20\x03!!!\n")%r(
+SF:TLSSessionReq,C,"Hello\x20\x16\x03!!!\n")%r(Kerberos,A,"Hello\x20!!!\n"
+SF:)%r(FourOhFourRequest,47,"Hello\x20GET\x20/nice%20ports%2C/Tri%6Eity\.t
+SF:xt%2ebak\x20HTTP/1\.0\r!!!\nHello\x20\r!!!\n")%r(LPDString,12,"Hello\x2
+SF:0\x01default!!!\n")%r(LDAPSearchReq,17,"Hello\x200\x84!!!\nHello\x20\x0
+SF:1!!!\n");
+Service Info: Host: GATEKEEPER; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-061: NT_STATUS_OBJECT_NAME_NOT_FOUND
+|_smb-vuln-ms10-054: false
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 19 18:27:58 2021 -- 1 IP address (1 host up) scanned in 251.19 seconds
