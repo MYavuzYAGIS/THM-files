@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "7870ce6f4bd4b15c",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3c65d102ed50b1a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Wireshark/00-ARP Overview.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "868b5f847d93b6a1",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6a550ffaf27dd78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab991ef655f93231",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c978ecc6a0a4dbde",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c5ec927f1ab10a78",
+    "type": "split",
+    "children": [
+      {
+        "id": "4515775d17e5172f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e27c3f2dde73b9b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Wireshark/00-ARP Overview.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "e3c65d102ed50b1a",
+  "lastOpenFiles": [
+    "Wireshark/00-ARP Overview.md",
+    "New Box.md"
+  ]
+}
