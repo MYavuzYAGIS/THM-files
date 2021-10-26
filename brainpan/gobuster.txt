@@ -1,0 +1,1 @@
+/bin                  (Status: 301) [Size: 0] [--> /bin/]
