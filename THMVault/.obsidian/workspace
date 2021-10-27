@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Brainpan/1overflow/002notes.md",
+            "file": "rubeus.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brainpan/1overflow/002notes.md",
+                "file": "rubeus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,8 +88,9 @@
   },
   "active": "2187fa72a38da87f",
   "lastOpenFiles": [
+    "rubeus.md",
+    "Kerberos Attack Notes/kerberum.md",
     "Brainpan/1overflow/002notes.md",
-    "Untitled.md",
     "Brainpan/1overflow/0fuzz.md",
     "Brainpan/0Recon/000-recon.md",
     "Brainpan/0Recon/0002-gobuster.md",
