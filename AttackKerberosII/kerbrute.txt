@@ -1,0 +1,11 @@
+2021/10/28 01:09:56 >  Using KDC(s):
+2021/10/28 01:09:56 >  	10.10.180.91:88
+2021/10/28 01:09:56 >  [+] VALID USERNAME:	 james@spookysec.local
+2021/10/28 01:09:58 >  [+] VALID USERNAME:	 svc-admin@spookysec.local
+2021/10/28 01:10:00 >  [+] VALID USERNAME:	 James@spookysec.local
+2021/10/28 01:10:00 >  [+] VALID USERNAME:	 robin@spookysec.local
+2021/10/28 01:10:08 >  [+] VALID USERNAME:	 darkstar@spookysec.local
+2021/10/28 01:10:12 >  [+] VALID USERNAME:	 administrator@spookysec.local
+2021/10/28 01:10:21 >  [+] VALID USERNAME:	 backup@spookysec.local
+2021/10/28 01:10:25 >  [+] VALID USERNAME:	 paradox@spookysec.local
+2021/10/28 01:10:52 >  [+] VALID USERNAME:	 JAMES@spookysec.local
