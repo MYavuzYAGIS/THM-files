@@ -1,0 +1,134 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.18
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.10.241.151/retro/ [10.10.241.151]
+[32m[+][0m Started: Thu Nov  4 10:08:08 2021
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entries:
+ |  - Server: Microsoft-IIS/10.0
+ |  - X-Powered-By: PHP/7.1.29
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: http://10.10.241.151/retro/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: http://10.10.241.151/retro/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://10.10.241.151/retro/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 5.2.1 identified (Insecure, released on 2019-05-21).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://10.10.241.151/retro/index.php/feed/, <generator>https://wordpress.org/?v=5.2.1</generator>
+ |  - http://10.10.241.151/retro/index.php/comments/feed/, <generator>https://wordpress.org/?v=5.2.1</generator>
+
+[32m[+][0m WordPress theme in use: 90s-retro
+ | Location: http://10.10.241.151/retro/wp-content/themes/90s-retro/
+ | Latest Version: 1.4.10 (up to date)
+ | Last Updated: 2019-04-15T00:00:00.000Z
+ | Readme: http://10.10.241.151/retro/wp-content/themes/90s-retro/readme.txt
+ | Style URL: http://10.10.241.151/retro/wp-content/themes/90s-retro/style.css?ver=5.2.1
+ | Style Name: 90s Retro
+ | Style URI: https://organicthemes.com/retro-theme/
+ | Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably n...
+ | Author: Organic Themes
+ | Author URI: https://organicthemes.com
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.4.10 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://10.10.241.151/retro/wp-content/themes/90s-retro/style.css?ver=5.2.1, Match: 'Version: 1.4.10'
+
+[32m[+][0m Enumerating Vulnerable Plugins (via Passive Methods)
+
+[34m[i][0m No plugins Found.
+
+[32m[+][0m Enumerating Vulnerable Themes (via Passive and Aggressive Methods)
+
+ Checking Known Locations -: |======================================================================================================================================================================
+ Checking Known Locations -: |================================================|
+[32m[+][0m Checking Theme Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m No themes Found.
+
+[32m[+][0m Enumerating Timthumbs (via Passive and Aggressive Methods)
+
+ Checking Known Locations -: |================================================|
+
+[34m[i][0m No Timthumbs Found.
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |=================================================|
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m Enumerating DB Exports (via Passive and Aggressive Methods)
+
+ Checking DB Exports -: |=====================================================|
+
+[34m[i][0m No DB Exports Found.
+
+[32m[+][0m Enumerating Medias (via Passive and Aggressive Methods) (Permalink setting must be set to "Plain" for those to be detected)
+
+ Brute Forcing Attachment IDs -: |============================================|
+
+[34m[i][0m No Medias Found.
+
+[32m[+][0m Enumerating Users (via Passive and Aggressive Methods)
+
+ Brute Forcing Author IDs -: |================================================|
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m wade
+ | Found By: Author Posts - Author Pattern (Passive Detection)
+ | Confirmed By:
+ |  Wp Json Api (Aggressive Detection)
+ |   - http://10.10.241.151/retro/index.php/wp-json/wp/v2/users/?per_page=100&page=1
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[32m[+][0m Wade
+ | Found By: Rss Generator (Passive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Thu Nov  4 10:09:48 2021
+[32m[+][0m Requests Done: 3267
+[32m[+][0m Cached Requests: 37
+[32m[+][0m Data Sent: 937.105 KB
+[32m[+][0m Data Received: 526.123 KB
+[32m[+][0m Memory used: 290.344 MB
+[32m[+][0m Elapsed time: 00:01:40

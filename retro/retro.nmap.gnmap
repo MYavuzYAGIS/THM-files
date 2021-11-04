@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Thu Nov  4 16:50:46 2021 as: nmap -sV -sC -Pn --script vuln -oA retro.nmap 10.10.241.151
+Host: 10.10.241.151 ()	Status: Up
+Host: 10.10.241.151 ()	Ports: 80/open/tcp//http//Microsoft IIS httpd 10.0/, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/	Ignored State: filtered (998)
+# Nmap done at Thu Nov  4 16:55:53 2021 -- 1 IP address (1 host up) scanned in 307.15 seconds
